@@ -14,6 +14,7 @@ class Student:
 		self.courseMarks[course] = mark
 
 	def average(self):
+
 		marks = self.courseMarks.values()
 		return sum(marks) / len(marks)
 
@@ -23,4 +24,4 @@ test = Student("Dylan", "Stank")
 test.addCourseMark("comp410", 10)
 test.addCourseMark("comp401", 10)
 test.addCourseMark("comp174", 100)
-print(test.average())
+assert(test.average() == 40)
